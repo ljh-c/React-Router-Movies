@@ -62,7 +62,6 @@ const Movie = (props) => {
         (<div className="delete-button" onClick={removeSavedMovie}>Remove</div>) :
         (<div className="save-button" onClick={addSavedMovie}>Save</div>)
       }
-      <div onClick={removeSavedMovie}>Remove</div>
     </div>
   );
 }
