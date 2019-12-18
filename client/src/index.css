@@ -40,6 +40,11 @@ body {
   margin-right: 10px;
 }
 
+.saved-list > a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .saved-movie {
   margin: 0 10px;
 }
@@ -69,4 +74,22 @@ body {
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
+}
+
+.movie-list > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.delete-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: #df4d55;
+}
+.delete-button:hover {
+  background-color: #dd74dd;
+  color: white;
 }
