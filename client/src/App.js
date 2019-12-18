@@ -11,6 +11,17 @@ const App = () => {
     setSavedList( [...savedList, movie] );
   };
 
+  const removeFromSaved = movie => {
+    console.log(savedList);
+    let newList = [];
+    for (let i = 0; i < savedList.length; i++) {
+      if (savedList[i].title !== movie.title) {
+        newList.push(savedList[i]);
+      }
+    }
+    setSavedList( newList );
+  };
+
   return (
     <div>
       <SavedList list={savedList} />
@@ -18,7 +29,11 @@ const App = () => {
         <MovieList />
       </Route>
       <Route path="/movies/:movieId">
-        <Movie addToSavedList={addToSavedList} />
+        <Movie 
+          addToSavedList={addToSavedList} 
+          removeFromSaved={removeFromSaved} 
+          savedList={savedList}
+        />
       </Route>
     </div>
   );
